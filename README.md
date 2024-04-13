@@ -4,5 +4,24 @@
 
 
 ## Directory
+- root: berisikan seluruh folder dan file dari project. Taruh halaman-halaman baru pada folder ini.
+  - api: berisikan end point untuk keperluan api. Taruh program api pada folder ini.
+  - controller: berisikan program-program yang sifatnya tidak berkenaan dengan tampilan/halaman web.
+  - database: berisikan program-program database yang diperlukan dalam menjalankan web
 
 ## Program
+### Home : /*
+index.php: Berisikan dua halaman yang digabungkan: Halaman auth dan halaman melihat data transaksi
+
+### Database: database/*
+database.php       : melakukan set up environment variable database yang digunakan dan membuat koneksi ke database.
+migrate.php        : membuat ulang database tanpa melakukan import secara manual.
+orbit_bank_db.sql  : membuat tabel-tabel ke dalam database
+
+### Auth
+auth.php  : mengarahkan untuk meng-handle data auth dari index.php
+controller/auth.php  : pengecekan login, login, logout, dan register
+
+### Transaction
+transaction.php : mengharahkan untuk meng-handle data transaction dari index.php
+controller/transaction.php  : mengambil data balance, menyimpan uang, menarik uang, mentransfer uang
