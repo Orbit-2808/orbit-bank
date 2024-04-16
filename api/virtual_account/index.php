@@ -9,7 +9,7 @@
 include_once($_SERVER['DOCUMENT_ROOT'] . "/controller/virtual_account.php");
 
 // make connection to db
-$conn = dbConnect();
+$conn = dbConnect("orbit_bank_db");
 
 // code here
 
