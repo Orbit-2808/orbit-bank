@@ -19,9 +19,10 @@
 index.php: Berisikan dua halaman yang digabungkan: Halaman auth dan halaman melihat data transaksi
 
 ### Database: database/*
-database.php       : melakukan set up environment variable database yang digunakan dan membuat koneksi ke database.
+config.php         : melakukan set up environment variable database yang digunakan dan membuat koneksi ke database.
 
 migrate.php        : membuat ulang database tanpa melakukan import secara manual.
+
 orbit_bank_db.sql  : membuat tabel-tabel ke dalam database
 
 
