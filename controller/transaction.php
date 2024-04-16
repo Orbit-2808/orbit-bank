@@ -131,7 +131,7 @@ function getBalanceRecords($accountNumber) {
     }
 
     mysqli_close($conn);
-    return $row;
+    return $result;
 }
 
 function saveMoney($accountNumber, $amount) {
