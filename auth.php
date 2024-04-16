@@ -1,5 +1,5 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'] . "/controller/auth.php");
+include_once("controller/auth.php");
 
 // get submit value
 if ($_SERVER["REQUEST_METHOD"] == "POST") $submitValue = $_POST["submit"];
@@ -30,7 +30,7 @@ switch ($submitValue) {
         $sessionCond = login($_POST["username"], $_POST["password"]);
         if ($sessionCond == SessionCondtion::loggedIn) {
             echo "success" . $_SERVER['HTTP_HOST'];
-            header("Location: ../");
+            header("Location: index.php");
             die();
         } else {
             echo "fail";
@@ -40,7 +40,7 @@ switch ($submitValue) {
         $sessionCond = isLoggedIn();
         if ($sessionCond == SessionCondtion::loggedIn) {
             logout();
-            header("Location: /");
+            header("Location: index.php");
             die();
         } else {
             echo "Cannot logout";

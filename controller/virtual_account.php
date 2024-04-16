@@ -1,6 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT'] . "/database/database.php");
-include_once($_SERVER['DOCUMENT_ROOT'] . "/controller/transaction.php");
+include_once("database/config.php");
+include_once("controller/transaction.php");
 
 function generateVirtualAccountNumber($receiverAccountNumber) {
     // code here
